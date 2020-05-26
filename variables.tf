@@ -7,7 +7,7 @@ variable "vpc" {
 
 variable "subnets" {
   description = "The list of subnet ids to deploy"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "source_sg" {
@@ -60,7 +60,7 @@ variable "mysql_cluster_parameters" {
 ### tags
 variable "tags" {
   description = "The key-value maps for tagging"
-  type        = "map"
+  type        = map
 }
 
 ### description
